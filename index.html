@@ -7,10 +7,8 @@
 
   <title>Loshitha Portfolio</title>
 
-  <!-- GOOGLE FONT -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- FONT AWESOME -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 
   <style>
@@ -302,6 +300,39 @@
       box-shadow:0 0 30px #38bdf8;
     }
 
+    /* TASK SECTION */
+
+    .task-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .task-box{
+      background:#1e293b;
+      padding:30px;
+      border-radius:20px;
+      text-align:center;
+      transition:0.4s;
+      box-shadow:0 0 15px rgba(56,189,248,0.2);
+    }
+
+    .task-box:hover{
+      transform:translateY(-10px);
+      box-shadow:0 0 25px #38bdf8;
+    }
+
+    .task-box h3{
+      color:#38bdf8;
+      margin-bottom:15px;
+      font-size:26px;
+    }
+
+    .task-box p{
+      color:#cbd5e1;
+      line-height:1.8;
+    }
+
     .contact-box{
       background:#1e293b;
       padding:40px;
@@ -414,6 +445,7 @@
   <nav>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
+    <a href="#tasks">Tasks</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -451,9 +483,11 @@
     <a href="https://www.instagram.com/loshitha_naidu_/" target="_blank">
       <i class="fab fa-instagram"></i>
     </a>
-<a href="https://github.com/loshithanavyaspurthithummala-tech?utm_source=chatgpt.com" target="_blank">
+
+    <a href="https://github.com/loshithanavyaspurthithummala-tech" target="_blank">
       <i class="fab fa-github"></i>
     </a>
+
   </div>
 
 </section>
@@ -511,6 +545,64 @@
 
 </section>
 
+<!-- TASK SECTION -->
+<section id="tasks">
+
+  <h2 class="title">CodSoft Internship Tasks</h2>
+
+  <div class="task-container">
+
+    <!-- TASK 1 -->
+
+    <a href="portfolio.html" style="text-decoration:none; color:white;">
+
+      <div class="task-box">
+
+        <h3>Task 1</h3>
+
+        <p>
+          Personal Portfolio Website using HTML and CSS with responsive design.
+        </p>
+
+      </div>
+
+    </a>
+
+    <!-- TASK 2 -->
+
+    <a href="index.html" style="text-decoration:none; color:white;">
+
+      <div class="task-box">
+
+        <h3>Task 2</h3>
+
+        <p>
+          Creative Landing Page with modern UI and interactive effects.
+        </p>
+
+      </div>
+
+    </a>
+
+    <!-- TASK 3 -->
+
+    <a href="calculator.html" style="text-decoration:none; color:white;">
+
+      <div class="task-box">
+
+        <h3>Task 3</h3>
+
+        <p>
+          Functional Calculator App using HTML CSS and JavaScript.
+        </p>
+
+      </div>
+
+    </a>
+
+  </div>
+
+</section>
 <section id="projects">
 
   <h2 class="title">Projects</h2>
