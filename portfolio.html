@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Loshitha Portfolio</title>
+
+  <style>
+      .skill-box{
+  background: white;
+  color:blue ;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+}
+      
+      .skill-box{
+  animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow{
+  from{
+    box-shadow: 0 0 5px #00bcd4;
+  }
+
+  to{
+    box-shadow: 0 0 20px #00bcd4;
+  }
+}
+
+  .skill-box{
+  animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float{
+  0%{
+    transform: translateY(0);
+  }
+
+  50%{
+    transform: translateY(-8px);
+  }
+
+  100%{
+    transform: translateY(0);
+  }
+}
+.skill-box{
+  transition: 0.3s;
+}
+
+.skill-box:hover{
+  transform: scale(1.1);
+}
+
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background:#f4f4f4;
+      color:#333;
+    }
+
+    header{
+      background:#0f172a;
+      color:white;
+      padding:20px 50px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    header h1{
+      font-size:32px;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin-left:20px;
+      font-size:18px;
+    }
+
+    .hero{
+      height:90vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-direction:column;
+      text-align:center;
+      background:linear-gradient(to right,#2563eb,#7c3aed);
+      color:white;
+      padding:20px;
+    }
+
+    .hero img{
+      width:180px;
+      height:180px;
+      border-radius:50%;
+      object-fit:cover;
+      border:5px solid white;
+      margin-bottom:20px;
+    }
+
+    .hero h2{
+      font-size:45px;
+      margin-bottom:10px;
+    }
+
+    .hero p{
+      font-size:20px;
+    }
+
+    section{
+      padding:60px 50px;
+    }
+
+    .title{
+      text-align:center;
+      font-size:35px;
+      margin-bottom:40px;
+      color:#2563eb;
+    }
+
+    .about p{
+      text-align:center;
+      max-width:700px;
+      margin:auto;
+      line-height:1.8;
+      font-size:18px;
+    }
+
+    .skills{
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .skill-box{
+      background:white;
+      padding:20px 30px;
+      border-radius:10px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+      font-size:18px;
+      font-weight:bold;
+    }
+
+    .projects{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+    }
+
+    .project-card{
+      background:white;
+      padding:20px;
+      border-radius:10px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .project-card h3{
+      margin-bottom:10px;
+      color:#2563eb;
+    }
+
+    .resume{
+      text-align:center;
+    }
+
+    .resume a{
+      background:#2563eb;
+      color:white;
+      padding:15px 30px;
+      text-decoration:none;
+      border-radius:8px;
+      font-size:18px;
+    }
+
+    .contact{
+      text-align:center;
+      line-height:2;
+      font-size:18px;
+    }
+
+    footer{
+      background:#0f172a;
+      color:white;
+      text-align:center;
+      padding:20px;
+    }
+
+    @media(max-width:768px){
+      header{
+        flex-direction:column;
+      }
+
+      nav{
+        margin-top:10px;
+      }
+
+      .hero h2{
+        font-size:35px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Loshitha</h1>
+
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a href="#hire me">Hire Me</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    
+    <!-- Replace image -->
+
+
+<img src="spurthi.png" width="200">
+    <h2>Hello, I'm Loshitha</h2>
+    <p>Web Development Intern | Frontend Learner</p>
+  </section>
+
+  <section id="about" class="about">
+    <h2 class="title">About Me</h2>
+
+    <p>
+      I am a passionate web development student interested in creating
+      beautiful and responsive websites using HTML, CSS, and JavaScript.
+      I love learning new technologies and improving my coding skills.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2 class="title">My Skills</h2>
+
+    <div class="skills">
+      <div class="skill-box">HTML</div>
+      <div class="skill-box">CSS</div>
+      <div class="skill-box">JavaScript</div>
+      <div class="skill-box">Responsive Design</div>
+       <div class="skill-box">Java</div>
+        <div class="skill-box">UI/UX Design</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2 class="title">Projects</h2>
+
+    <div class="projects">
+
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>A personal portfolio website created using HTML and CSS.</p>
+      </div>
+
+      <div class="project-card">
+        <h3>Landing Page</h3>
+        <p>A responsive landing page design for practice.</p>
+      </div>
+
+      <div class="project-card">
+        <h3>Calculator</h3>
+        <p>A simple calculator built using HTML, CSS, and JavaScript.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="resume">
+    <h2 class="title">Resume</h2>
+
+    <!-- Add your resume pdf -->
+    <a href="https://drive.google.com/file/d/1c7_dHNSSLm0c-KkKkNTIqUQl_G7QuOc4/view?usp=drivesdk" target="_blank">
+  Download Resume
+</a>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2 class="title">Contact Me</h2>
+    
+   <p>Email:
+  <a href="mailto:loshithanavyaspurthithummala@gmail.com">
+    loshithanavyaspurthithummala@gmail.com
+  </a>
+   </p>
+
+    <p>Phone:
+  <a href="tel:6305393802">
+    6305393802
+  </a>
+    </p>
+    <p>
+  LinkedIn:
+  <a href="https://www.linkedin.com/in/loshitha-navya-spurthi-thummala-033357380?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">
+    Visit My LinkedIn
+  </a>
+</p>
+  </section>
+
+  <footer>
+    <p>© 2026 Loshitha. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
