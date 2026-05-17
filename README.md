@@ -27,7 +27,7 @@ This project helps in presenting my profile in a clean and professional way and 
 ---
 
  📂 Project Structure : 
- https://loshithanavyaspurthithummala-tech.github.io/https-github.com-loshithanavyaspurthithummala-CODSOFT/
+ https://loshithanavyaspurthithummala-tech.github.io/codsoft/
 
  ---
 
