@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gaming Landing Page</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+.video-section{
+    padding:100px 8%;
+    background:#050816;
+    text-align:center;
+}
+
+.video-section video{
+    width:100%;
+    max-width:950px;
+    border-radius:25px;
+    box-shadow:0 0 30px rgba(0,247,255,0.4);
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Orbitron',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050816;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* SCROLL BAR */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#00f7ff;
+    border-radius:20px;
+}
+
+/* NAVBAR */
+
+nav{
+    width:100%;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    top:0;
+    z-index:1000;
+    background:rgba(0,0,0,0.4);
+    backdrop-filter:blur(10px);
+}
+
+.logo{
+    font-size:30px;
+    font-weight:700;
+    color:#00f7ff;
+    text-shadow:0 0 15px #00f7ff;
+}
+
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+    position:relative;
+}
+
+nav ul li a::after{
+    content:'';
+    width:0%;
+    height:2px;
+    background:#00f7ff;
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    transition:0.3s;
+}
+
+nav ul li a:hover::after{
+    width:100%;
+}
+
+nav ul li a:hover{
+    color:#00f7ff;
+}
+
+/* HERO SECTION */
+
+.hero{
+    width:100%;
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)),
+    url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1600&auto=format&fit=crop');
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero-content h1{
+    font-size:75px;
+    color:#00f7ff;
+    text-shadow:0 0 20px #00f7ff;
+    animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+
+    from{
+        text-shadow:0 0 10px #00f7ff;
+    }
+
+    to{
+        text-shadow:0 0 25px #00f7ff,
+                    0 0 40px #00f7ff;
+    }
+}
+
+.hero-content p{
+    margin-top:20px;
+    max-width:750px;
+    line-height:1.8;
+    color:#dcdcdc;
+    font-size:18px;
+}
+
+.hero-buttons{
+    margin-top:40px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 35px;
+    margin:10px;
+    border-radius:40px;
+    text-decoration:none;
+    transition:0.4s;
+    font-size:16px;
+}
+
+.btn-primary{
+    background:#00f7ff;
+    color:black;
+    font-weight:bold;
+}
+
+.btn-primary:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 20px #00f7ff;
+}
+
+.btn-secondary{
+    border:2px solid #00f7ff;
+    color:#00f7ff;
+}
+
+.btn-secondary:hover{
+    background:#00f7ff;
+    color:black;
+}
+
+/* STATS SECTION */
+
+.stats{
+    padding:80px 8%;
+    background:#0b1023;
+}
+
+.stats-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:30px;
+    text-align:center;
+}
+
+.stat-box{
+    background:#131b35;
+    padding:40px;
+    border-radius:20px;
+    transition:0.4s;
+}
+
+.stat-box:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 20px rgba(0,247,255,0.3);
+}
+
+.stat-box h2{
+    color:#00f7ff;
+    font-size:40px;
+}
+
+.stat-box p{
+    margin-top:10px;
+    color:#d4d4d4;
+}
+
+/* FEATURES */
+
+.features{
+    padding:100px 8%;
+    background:#050816;
+}
+
+.section-title{
+    text-align:center;
+    font-size:45px;
+    color:#00f7ff;
+    margin-bottom:60px;
+}
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#131b35;
+    padding:35px;
+    border-radius:20px;
+    transition:0.4s;
+    border:1px solid rgba(255,255,255,0.1);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 20px rgba(0,247,255,0.3);
+}
+
+.card h3{
+    color:#00f7ff;
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#d0d0d0;
+    line-height:1.7;
+}
+
+/* GAMES SECTION */
+
+.games{
+    padding:100px 8%;
+    background:#0b1023;
+}
+
+.games-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.game-card{
+    background:#131b35;
+    border-radius:20px;
+    overflow:hidden;
+    transition:0.4s;
+}
+
+.game-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 0 20px rgba(0,247,255,0.4);
+}
+
+.game-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.game-info{
+    padding:25px;
+}
+
+.game-info h3{
+    color:#00f7ff;
+    margin-bottom:10px;
+}
+
+.game-info p{
+    color:#d4d4d4;
+    line-height:1.6;
+}
+
+/* VIDEO SECTION */
+
+.video-section{
+    padding:100px 8%;
+    background:#050816;
+    text-align:center;
+}
+
+.video-section video{
+    width:100%;
+    max-width:900px;
+    border-radius:20px;
+    box-shadow:0 0 25px rgba(0,247,255,0.3);
+}
+
+/* ABOUT SECTION */
+
+.about{
+    padding:100px 8%;
+    background:#0b1023;
+    display:flex;
+    align-items:center;
+    gap:50px;
+    flex-wrap:wrap;
+}
+
+.about img{
+    width:450px;
+    max-width:100%;
+    border-radius:20px;
+    box-shadow:0 0 20px rgba(0,247,255,0.3);
+}
+
+.about-text{
+    flex:1;
+}
+
+.about-text h2{
+    font-size:45px;
+    color:#00f7ff;
+    margin-bottom:20px;
+}
+
+.about-text p{
+    line-height:1.8;
+    color:#d4d4d4;
+}
+
+/* TESTIMONIALS */
+
+.testimonials{
+    padding:100px 8%;
+    background:#050816;
+}
+
+.testimonial-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.testimonial{
+    background:#131b35;
+    padding:30px;
+    border-radius:20px;
+    transition:0.4s;
+}
+
+.testimonial:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 20px rgba(0,247,255,0.3);
+}
+
+.testimonial h3{
+    color:#00f7ff;
+    margin-bottom:15px;
+}
+
+.testimonial p{
+    line-height:1.7;
+    color:#d4d4d4;
+}
+
+/* CONTACT */
+
+.contact{
+    padding:100px 8%;
+    background:#0b1023;
+    text-align:center;
+}
+
+.contact form{
+    max-width:700px;
+    margin:auto;
+}
+
+.contact input,
+.contact textarea{
+    width:100%;
+    padding:15px;
+    margin:15px 0;
+    border:none;
+    outline:none;
+    border-radius:12px;
+    background:#131b35;
+    color:white;
+}
+
+.contact button{
+    padding:14px 40px;
+    border:none;
+    border-radius:30px;
+    background:#00f7ff;
+    color:black;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.4s;
+}
+
+.contact button:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 20px #00f7ff;
+}
+
+/* FOOTER */
+
+footer{
+    padding:30px;
+    text-align:center;
+    background:#02040d;
+    color:#cfcfcf;
+    border-top:1px solid rgba(255,255,255,0.1);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .hero-content h1{
+        font-size:45px;
+    }
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+
+    .section-title{
+        font-size:35px;
+    }
+
+    .about{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+    <div class="logo">GAMEZONE</div>
+
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#games">Games</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>ENTER THE GAMING WORLD</h1>
+
+        <p>
+            Experience futuristic gaming with immersive graphics,
+            multiplayer battles, and thrilling adventures.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#" class="btn btn-primary">Play Now</a>
+
+            <a href="#games" class="btn btn-secondary">Explore</a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- STATS -->
+
+<section class="stats">
+
+    <div class="stats-container">
+
+        <div class="stat-box">
+            <h2>10M+</h2>
+            <p>Players Worldwide</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>500+</h2>
+            <p>Gaming Missions</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>4.9★</h2>
+            <p>Game Ratings</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FEATURES -->
+
+<section class="features" id="features">
+
+    <h2 class="section-title">GAME FEATURES</h2>
+
+    <div class="feature-grid">
+
+        <div class="card">
+            <h3>Ultra Graphics</h3>
+            <p>
+                Stunning realistic visuals with cinematic effects.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Multiplayer Battles</h3>
+            <p>
+                Play with friends and dominate real-time battles.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Fast Performance</h3>
+            <p>
+                Smooth gameplay and lightning-fast loading speed.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- GAMES -->
+
+<section class="games" id="games">
+
+    <h2 class="section-title">POPULAR GAMES</h2>
+
+    <div class="games-container">
+
+        <div class="game-card">
+
+            <img src="https://images.unsplash.com/photo-1542751110-97427bbecf20?q=80&w=1200&auto=format&fit=crop">
+
+            <div class="game-info">
+                <h3>Cyber Arena</h3>
+                <p>Battle enemies in futuristic multiplayer arenas.</p>
+            </div>
+
+        </div>
+
+        <div class="game-card">
+
+            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1200&auto=format&fit=crop">
+
+            <div class="game-info">
+                <h3>Shadow Legends</h3>
+                <p>Adventure action game with thrilling missions.</p>
+            </div>
+
+        </div>
+
+        <div class="game-card">
+
+            <img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?q=80&w=1200&auto=format&fit=crop">
+
+            <div class="game-info">
+                <h3>Speed Racer X</h3>
+                <p>Realistic racing with high-speed drifting action.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- VIDEO SECTION -->
+
+<section class="video-section">
+
+    <h2 class="section-title">GAME TRAILER</h2>
+
+    <video controls autoplay muted loop>
+
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+
+    </video>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1200&auto=format&fit=crop">
+
+    <div class="about-text">
+
+        <h2>ABOUT GAMEZONE</h2>
+
+        <p>
+            GAMEZONE is a futuristic gaming platform designed for gamers who love
+            adventure, action, and immersive gameplay. This landing page is built
+            using pure HTML and CSS with glowing neon UI effects and responsive design.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- TESTIMONIALS -->
+
+<section class="testimonials">
+
+    <h2 class="section-title">PLAYER REVIEWS</h2>
+
+    <div class="testimonial-container">
+
+        <div class="testimonial">
+            <h3>Spurthi</h3>
+            <p>
+                “One of the best futuristic gaming experiences I have ever played.”
+            </p>
+        </div>
+
+        <div class="testimonial">
+            <h3>Nandini</h3>
+            <p>
+                “Amazing graphics and smooth gameplay. Absolutely loved it!”
+            </p>
+        </div>
+
+        <div class="testimonial">
+            <h3>Satya</h3>
+            <p>
+                “The multiplayer mode is super addictive and fun.”
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <h2 class="section-title">CONTACT US</h2>
+
+    <form>
+
+        <input type="text" placeholder="Your Name">
+
+        <input type="email" placeholder="Your Email">
+
+        <textarea rows="6" placeholder="Your Message"></textarea>
+
+        <button type="submit">Send Message</button>
+
+    </form>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    © 2026 GAMEZONE | Designed by Loshitha
+
+</footer>
+
+</body>
+</html>
